@@ -5,6 +5,9 @@
 ------------------------------------------------------------ */  
 body {
   font: 400 100% 'PT Serif', serif;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9a9a9a), to(#d4ddea));
+  background-image: -webkit-linear-gradient(bottom, #9a9a9a 0%, #d4ddea 100%);
+  background-image: -o-linear-gradient(bottom, #9a9a9a 0%, #d4ddea 100%);
   background-image: linear-gradient(to top, #9a9a9a 0%, #d4ddea 100%);
 }
 
@@ -23,7 +26,9 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-align: center;
 }
 
@@ -39,6 +44,8 @@ body {
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-height: 650px;
 }
@@ -46,14 +53,18 @@ main {
 .flexPricingTable__box {
   background: white;
   border-radius: 10px;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin: 0.8em;
   position: relative;
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .flexPricingTable__box:nth-child(even) {
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .flexPricingTable__boxHeading,
@@ -71,13 +82,16 @@ main {
   bottom: -109px;
   left: 50%;
   color: black;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .flexPricingTable__boxHeading {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  box-shadow: inset 0 -8px 15px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 -8px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 -8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .flexPricingTable__boxHeading > i {
@@ -98,7 +112,9 @@ main {
   margin-left: 0.1em;
   position: absolute;
   top: 30%;
-  transform: translateY(-30%);  
+  -webkit-transform: translateY(-30%);
+      -ms-transform: translateY(-30%);
+          transform: translateY(-30%);  
 }
 
 .flexPricingTable__description {
@@ -117,22 +133,36 @@ main {
   position: absolute;
   bottom: -45px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .bg-pink {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ec0287), color-stop(70%, #f3542c));
+  background-image: -webkit-linear-gradient(top left, #ec0287, #f3542c 70%);
+  background-image: -o-linear-gradient(top left, #ec0287, #f3542c 70%);
   background-image: linear-gradient(to bottom right, #ec0287, #f3542c 70%);
 }
 
 .bg-orange {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffc400), color-stop(70%, #f3602a));
+  background-image: -webkit-linear-gradient(top left, #ffc400, #f3602a 70%);
+  background-image: -o-linear-gradient(top left, #ffc400, #f3602a 70%);
   background-image: linear-gradient(to bottom right, #ffc400, #f3602a 70%);
 }
 
 .bg-blue {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#03abf6), color-stop(70%, #02c2ab));
+  background-image: -webkit-linear-gradient(top left, #03abf6, #02c2ab 70%);
+  background-image: -o-linear-gradient(top left, #03abf6, #02c2ab 70%);
   background-image: linear-gradient(to bottom right, #03abf6, #02c2ab 70%);
 }
 
 .bg-magenta {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#dd048f), color-stop(70%, #672994));
+  background-image: -webkit-linear-gradient(top left, #dd048f, #672994 70%);
+  background-image: -o-linear-gradient(top left, #dd048f, #672994 70%);
   background-image: linear-gradient(to bottom right, #dd048f, #672994 70%);
 }
 
@@ -197,11 +227,15 @@ main {
   }
 
   .flexPricingTable__box {
-    align-self: stretch;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
   }
 
   .flexPricingTable__box:nth-child(even) {
-    align-self: stretch;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
   }
 
   .flexPricingTable__box p:last-child {
@@ -219,6 +253,9 @@ main {
 
 @media screen and (max-width: 950px) {
   body {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#d4ddea), to(#d4ddea));
+    background-image: -webkit-linear-gradient(bottom, #d4ddea 0%, #d4ddea 100%);
+    background-image: -o-linear-gradient(bottom, #d4ddea 0%, #d4ddea 100%);
     background-image: linear-gradient(to top, #d4ddea 0%, #d4ddea 100%);
   }
 
@@ -231,19 +268,26 @@ main {
   }
 
   main {
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .flexPricingTable__box {
-    flex: 0 0 44.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 44.5%;
+            flex: 0 0 44.5%;
     margin-bottom: 4em;
   }
 }
 
 @media screen and (max-width: 510px) {
   .flexPricingTable__box {
-    flex: 0 0 90%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90%;
+            flex: 0 0 90%;
     margin: 2em 0 4em;
   }
 
