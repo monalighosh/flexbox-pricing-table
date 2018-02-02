@@ -20,8 +20,6 @@ body {
 .flexPricingTable {
   width: 100%;
   max-width: 1300px;
-  margin: 0 auto;
-  border: 1px solid black;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -40,9 +38,22 @@ body {
   padding: 1em 0 1.5em;
 }
 
+main {
+  display: flex;
+  min-height: 650px;
+}
+
 .flexPricingTable__box {
   background: white;
   border-radius: 10px;
+  flex: 1;
+  margin: 0.8em;
+  position: relative;
+  align-self: flex-start;
+}
+
+.flexPricingTable__box:nth-child(even) {
+  align-self: flex-end;
 }
 
 .flexPricingTable__boxHeading,
@@ -50,10 +61,22 @@ body {
   color: white;
   font-size: 1.8rem;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
-  text-shadow: 5px 0 5px rgba(0, 0, 0, 0.3);
-  font-weight: 700;
+  font-weight: 400;
   padding: 1em;
+}
+
+.flexPricingTable__box p:last-child {
+  position: absolute;
+  width: 100%;
+  top: 125%;
+  left: 50%;
+  transform: translate(-50%, -125%);
+}
+
+.flexPricingTable__boxHeading {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  box-shadow: inset 0 -8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .flexPricingTable__boxHeading > i {
@@ -65,15 +88,35 @@ body {
 .flexPricingTable__price {
   font-size: 6rem;
   position: relative;
+  padding: 0.2em;
 }
 
 .flexPricingTable__price:after {
   content: "$";
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-left: 0.1em;
   position: absolute;
   top: 30%;
   transform: translateY(-30%);  
+}
+
+.flexPricingTable__description {
+  padding: 0 1.5em 2.5em;
+  min-height: 200px;
+}
+
+.arrow {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top:  30px solid white;
+  border-bottom:  20px solid transparent;
+  border-right:  20px solid transparent;
+  border-left:  20px solid transparent;
+  position: absolute;
+  top: 109%;
+  left: 50%;
+  transform: translate(-50%, -109%);
 }
 
 .bg-pink {
@@ -97,7 +140,7 @@ body {
 }
 
 .col-orange {
-  color: #ffc400;
+  color: #f3602a;
 }
 
 .col-blue {
@@ -111,3 +154,6 @@ body {
 /* ------------------------------------------------------------
   Media queries
 ------------------------------------------------------------ */
+@media screen and (max-width: 1300px) {
+
+}
