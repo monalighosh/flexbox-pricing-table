@@ -5,7 +5,7 @@
 ------------------------------------------------------------ */  
 body {
   font: 400 100% 'PT Serif', serif;
-  background-image: linear-gradient(to top, #9a9a9a 0%, #d4ddea 70%);
+  background-image: linear-gradient(to top, #9a9a9a 0%, #d4ddea 100%);
 }
 
 .wrapper {
@@ -218,6 +218,18 @@ main {
 }
 
 @media screen and (max-width: 950px) {
+  body {
+    background-image: linear-gradient(to top, #d4ddea 0%, #d4ddea 100%);
+  }
+
+  .flexPricingTable {
+    height: 100%;
+  }
+
+  .flexPricingTable__heading {
+    margin-top: 1em;
+  }
+
   main {
     flex-wrap: wrap;
     justify-content: center;
@@ -232,6 +244,15 @@ main {
 @media screen and (max-width: 510px) {
   .flexPricingTable__box {
     flex: 0 0 90%;
+    margin: 2em 0 4em;
+  }
+
+  .flexPricingTable__heading {
+    font-size: 3rem;
+  }
+
+  .flexPricingTable__box:first-child {
+    margin-top: 0;
   }
 
   .flexPricingTable__description {
