@@ -1,0 +1,113 @@
+/* -------------------- Flexbox pricing table -------------------- */
+
+/* ------------------------------------------------------------
+  Global styles
+------------------------------------------------------------ */  
+body {
+  font: 400 100% 'PT Serif', serif;
+  background-image: linear-gradient(to top, #9a9a9a 0%, #d4ddea 70%);
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+/* ------------------------------------------------------------
+  Table styles
+------------------------------------------------------------ */
+.flexPricingTable {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  border: 1px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.flexPricingTable__heading {
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-shadow: 2px 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.flexPricingTable__desc {
+  font-size: 1.2rem;
+  padding: 1em 0 1.5em;
+}
+
+.flexPricingTable__box {
+  background: white;
+  border-radius: 10px;
+}
+
+.flexPricingTable__boxHeading,
+.flexPricingTable__box p:last-child {
+  color: white;
+  font-size: 1.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-shadow: 5px 0 5px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+  padding: 1em;
+}
+
+.flexPricingTable__boxHeading > i {
+  display: block;
+  font-size: 3.5rem;
+  padding-bottom: 0.4em;
+}
+
+.flexPricingTable__price {
+  font-size: 6rem;
+  position: relative;
+}
+
+.flexPricingTable__price:after {
+  content: "$";
+  font-size: 2.5rem;
+  margin-left: 0.1em;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-30%);  
+}
+
+.bg-pink {
+  background-image: linear-gradient(to bottom right, #ec0287, #f3542c 70%);
+}
+
+.bg-orange {
+  background-image: linear-gradient(to bottom right, #ffc400, #f3602a 70%);
+}
+
+.bg-blue {
+  background-image: linear-gradient(to bottom right, #03abf6, #02c2ab 70%);
+}
+
+.bg-magenta {
+  background-image: linear-gradient(to bottom right, #dd048f, #672994 70%);
+}
+
+.col-pink {
+  color: #ec0287;
+}
+
+.col-orange {
+  color: #ffc400;
+}
+
+.col-blue {
+  color: #03abf6;
+}
+
+.col-magenta {
+  color: #dd048f;
+}
+
+/* ------------------------------------------------------------
+  Media queries
+------------------------------------------------------------ */
