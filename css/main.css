@@ -1,6 +1,16 @@
 /* -------------------- Flexbox pricing table -------------------- */
 
 /* ------------------------------------------------------------
+  Normalize css minified
+------------------------------------------------------------ */  
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;box-sizing:border-box}*,:after,:before
+{box-sizing:inherit;margin:0;padding:0}article,aside,footer,header,main,nav,section{display:block}a{background-
+color:transparent;-webkit-text-decoration-skip:objects;text-decoration:none}abbr[title]{border-bottom:none;text-
+decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-
+family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-
+size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}
+
+/* ------------------------------------------------------------
   Global styles
 ------------------------------------------------------------ */  
 body {
